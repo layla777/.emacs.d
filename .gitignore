@@ -15,3 +15,7 @@ transient/
 .emacs.desktop
 .emacs.desktop.lock
 .emacs.d/.mc-lists.el
+
+# Ignore additional files
+ac-comphist.dat
+themes/emacs-color-theme-solarized/.gitignore
