@@ -1,259 +1,151 @@
-Solarized
-=========
+Solarized Colorscheme for Emacs
+===============================
 
-### [See official homepage for full content](http://ethanschoonover.com/solarized)
+Stolen from Ethan Schoonover <es@ethanschoonover.com> by Greg Pfeil <greg@technomadic.org>
 
-## Precision colors for machines and people
+Visit the [Solarized homepage]
+------------------------------
 
-[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)\
-
-
-Solarized is a sixteen color palette (eight monotones, eight accent colors) 
-designed for use with terminal and gui applications. It has several [unique 
-properties](#features). I designed this colorscheme with both precise 
-[CIELAB](http://en.wikipedia.org/wiki/Lab_color_space) lightness relationships 
-and a refined set of hues based on fixed color wheel relationships. It has been 
-tested extensively in real world use on color calibrated displays (as well as 
-uncalibrated/intentionally miscalibrated displays) and in a variety of lighting 
-conditions.
-
-![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)\
-
-Currently available in formats for (cf [screenshots](#screenshots) below):
-
-* **Vim** (the Vim-only portion of Solarized is [available 
-here](https://github.com/altercation/vim-colors-solarized), for use with 
-Pathogen, etc.)
-* **Mutt** e-mail client (*just* the Mutt colorscheme is [available 
-here](https://github.com/altercation/mutt-colors-solarized))
-* **Xresources** / Xdefaults
-* **iTerm2**
-* OS X **Terminal.app**
-* Adobe Photoshop Palette (inc. L\*a\*b values)
-* Apple Color Picker Palette
-* GIMP Palette
-
-Don't see the application you want to use it in? Download the palettes (or pull 
-the values from the table below) and create your own. Submit it back and I'll  
-happily note the contribution and include it on this page.
-
-**Note:** I am still tweaking the Vim highlighting for specific syntaxes and 
-welcome feedback on these.
-
-Download
---------
-
-### [Click here to download latest version](http://ethanschoonover.com/files/solarized/solarized.tar.gz)
-
-Or use the following links to access application specific downloads and git 
-repositories:
-
-*   **Git repo:**
-
-    The full git repository is at: <https://github.com/altercation/solarized>
-    Get it using the following command:
-
-        $ git clone git://github.com/altercation/solarized.git
-
-*   **Vim only:**
-
-    The vim-only colorscheme (Pathogen ready) is available at: 
-    <https://github.com/altercation/vim-colors-solarized>.
-    
-        $ git clone git://github.com/altercation/vim-colors-solarized.git
-
-    You can also download it from [vim.org](http://www.vim.org/scripts/script.php?script_id=3520).
-
-*   **Mutt only:**
-
-    The mutt-only variants can be cloned from 
-    <https://github.com/altercation/mutt-colors-solarized>
-
-        $ git clone git://github.com/altercation/mutt-colors-solarized.git
-
-*   **Canonical Project Page:**
-
-    Downloads, screenshots and more information are always available from the
-    project page: <http://ethanschoonover.com/solarized>
-
-Note that through the magic of 
-[git-subtree](https://github.com/apenwarr/git-subtree) these repositories are 
-all kept in sync, so you can pull any of them and get the most up-to-date 
-version.
-
-Features
---------
-
-1. **Selective contrast**
-
-    On a sunny summer day I love to read a book outside. Not right in the sun; 
-    that's too bright. I'll hunt for a shady spot under a tree. The shaded 
-    paper contrasts with the crisp text nicely. If you were to actually measure 
-    the contrast between the two, you'd find it is much lower than black text 
-    on a white background (or white on black) on your display device of choice.
-    Black text on white from a computer display is akin to reading a book in 
-    direct sunlight and tires the eye.
-
-    ![solarized selective contrast](https://github.com/altercation/solarized/raw/master/img/solarized-selcon.png)\
-
-    Solarized reduces *brightness contrast* but, unlike many low contrast 
-    colorschemes, retains *contrasting hues* (based on colorwheel relations) 
-    for syntax highlighting readability.
-
-2. **Both sides of the force**
-
-    ![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-dualmode.png)\
-
-    I often switch between dark and light modes when editing text and code.
-    Solarized retains the same selective contrast relationships and overall 
-    feel when switching between the light and dark background modes. A *lot* of 
-    thought, planning and testing has gone into making both modes feel like 
-    part of a unified colorscheme.
-
-3. **16/5 palette modes**
-
-    ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)\
-
-    Solarized works as a sixteen color palette for compatibility with common
-    terminal based applications / emulators. In addition, it has been carefull 
-    designed to scale down to a variety of five color palettes (four base 
-    monotones plus one accent color) for use in design work such as web design.
-    In every case it retains a strong personality but doesn't overwhelm.
-
-5.  **Precision, symmetry**
-
-    ![solarized symmetry](https://github.com/altercation/solarized/raw/master/img/solarized-sym.png)\
-
-    The monotones have symmetric CIELAB lightness differences, so switching 
-    from dark to light mode retains the same perceived contrast in brightness 
-    between each value. Each mode is equally readable. The accent colors are 
-    based off specific colorwheel relations and subsequently translated to 
-    CIELAB to ensure perceptual uniformity in terms of lightness. The hues 
-    themselves, as with the monotone \*a\*b values, have been adjusted within 
-    a small range to achieve the most pleasing combination of colors.
-
-    This makes colorscheme inversion trivial. Here, for instance, is a sass 
-    (scss) snippet that inverts solarized based on the class of the html tag 
-    (e.g. `<html class="dark red">` to give a dark background with red accent):
-
-        $base03:    #002b36;
-        $base02:    #073642;
-        $base01:    #586e75;
-        $base00:    #657b83;
-        $base0:     #839496;
-        $base1:     #93a1a1;
-        $base2:     #eee8d5;
-        $base3:     #fdf6e3;
-        $yellow:    #b58900;
-        $orange:    #cb4b16;
-        $red:       #d30102;
-        $magenta:   #d33682;
-        $violet:    #6c71c4;
-        $blue:      #268bd2;
-        $cyan:      #2aa198;
-        $green:     #859900;
-        @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
-        {
-            background-color:$rebase03;
-            color:$rebase0;
-            * { color:$rebase0; }
-            h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
-            a, a:active, a:visited { color: $rebase1; }
-        }
-        @mixin accentize($accent) {
-            a, a:active, a:visited, code.url { color: $accent; }
-            h1,h2,h3,h4,h5,h6 {color:$accent}
-        }
-        /* light is default mode, so pair with general html definition */
-        html, .light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}
-        .dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}
-        html * {
-            color-profile: sRGB;
-            rendering-intent: auto;
-        }
-
-Installation
-------------
-
-Installation instructions for each version of the colorscheme are included in 
-the subdirectory README files. Note that for Vim (and possibly for Mutt) you 
-may want to clone the specific repository (for instance if you are using 
-Pathogen). See the links at the top of this file.
-
-Font Samples
-------------
-
-Solarized has been designed to handle fonts of various weights and retain 
-readability, from the classic Terminus to the beefy Menlo.
-
-![font samples - light](https://github.com/altercation/solarized/raw/master/img/solarized-fontsamples-light.png)
-![font samples - dark](https://github.com/altercation/solarized/raw/master/img/solarized-fontsamples-dark.png)
-
-Clockwise from upper left: Menlo, Letter Gothic, Terminus, Andale Mono
+See the [Solarized homepage] for screenshots,
+details and colorscheme versions for Vim, Mutt, popular terminal emulators and
+other applications.
 
 Screenshots
 -----------
 
-Click to view.
+![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
 
-### Mutt
+Downloads
+---------
 
-[![mutt dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-mutt-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-mutt-dark.png)
-[![mutt light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-mutt-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-mutt-light.png)
+If you have come across this colorscheme via the [Emacs-only repository] on
+github, see the link above to the Solarized homepage or visit the main [Solarized repository].
 
-### C (Vim)
+The [Emacs-only repository] is kept in sync with the main [Solarized repository]. Issues, bug reports, changelogs that are not specific to the Emacs implementation should be submitted to the main [Solarized repository].
 
-[![c dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-dark.png)
-[![c light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-light.png)
+[Solarized homepage]:    http://ethanschoonover.com/solarized
+[Solarized repository]:  https://github.com/altercation/solarized
+[Emacs-only repository]:  https://github.com/sellout/emacs-color-theme-solarized
 
-### Haskell (Vim)
+Installation & Usage
+--------------------
 
-[![haskell dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-dark.png)
-[![haskell light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-light.png)
+### Emacs 24
 
-### HTML (Vim)
+1. Add the `emacs-color-theme-solarized` directory to your Emacs `custom-theme-load-path`.
+2. Add `(load-theme 'solarized t)` to your Emacs init file.
+3. Reload the init file, or restart Emacs.
 
-[![html dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-dark.png)
-[![html light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-light.png)
+### all versions
 
-### Java (Vim)
+To switch between the light and dark variations of Solarized, set the frame’s `background-mode`. This can be accomplished globally using `M-x customize-variable frame-background-mode` or on a per-frame basis with `(set-frame-parameter nil 'background-mode 'light)` (or `'dark`).  If you're in a terminal, you must also set the terminal parameter with `(set-terminal-parameter nil 'background-mode 'light)` (or `'dark`). Remember to call `enable-theme` after changing the background mode to update the state of the theme.
 
-[![java dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-dark.png)
-[![java light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-light.png)
+This allows you to have a mix of light and dark frames. I tend to use light frames in the GUI and dark frames in my terminal, so I use the following code:
 
-### Pandoc Markdown (Vim)
+```emacs-lisp
+(add-hook 'after-make-frame-functions
+          (lambda (frame)
+            (solarized-update-background-mode
+             (if (display-graphic-p frame) 'light 'dark)
+             (list frame))))
+```
+Similarly, you can switch between background modes with `M-x solarized-toggle-background-mode`.
 
-These screen shots show Vim running with my own [Pandoc Kit 
-Syntax](/pandockit).
+If you use [Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus), you can keep the mode in sync with the OS with
+```emacs-lisp
+(add-hook 'ns-system-appearance-change-functions
+          #'solarized-update-background-mode)
+```
 
-[![pandoc dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-dark.png)
-[![pandoc light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-light.png)
+### IMPORTANT NOTE FOR TERMINAL USERS:
 
-### Perl (Vim)
+If you are going to use Solarized in Terminal mode (i.e. not in a GUI version
+like Cocoa or X11 Emacs), **please please please** consider setting your
+terminal emulator's colorscheme to use the Solarized palette. The [Solarized
+repository] includes palettes for some popular terminal emulator as well as
+Xdefaults; or you can download them from the official [Solarized homepage].
+If you use this emacs color theme *without* having changed your emulator's
+palette, you will need to configure Solarized to degrade its colorscheme to
+a set compatible with the terminal's default limited 256 color palette
+(whereas by using the terminal's 16 ANSI color values, you would
+see the correct, specific values for the Solarized palette).
 
-[![perl dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-dark.png)
-[![perl light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-light.png)
+Again, I recommend just changing your terminal colors to Solarized values
+either manually or via one of the many terminal schemes available for import.
 
-### Python (Vim)
+Advanced Configuration
+----------------------
 
-[![python dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-dark.png)
-[![python light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-light.png)
+Solarized will work out of the box with just the instructions specified above
+but does include several variables that can be customized.
 
-### Ruby (Vim)
+    variable name            default   optional
+    --------------------------------------------
+    solarized-termcolors =   16    |   256
+    solarized-degrade    =   nil   |   t
+    solarized-bold       =   t     |   nil
+    solarized-underline  =   t     |   nil
+    solarized-italic     =   t     |   nil
+    solarized-contrast   =   normal|   high, low
+    solarized-visibility =   normal|   high, low
+    solarized-broken-srgb=   nil   |   t (see details for Mac behavior)
+    --------------------------------------------
 
-[![ruby dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark.png)
-[![ruby light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light.png)
+### Option Details
 
-### TeX (Vim)
+*   solarized-termcolors
 
-[![tex dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-dark.png)
-[![tex light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-light.png)
+    Some 256-color terminals also allow you to set and use the standard 16
+    colors in addition to the fixed 256-color palette. This option only
+    applies when your terminal is in 256-color mode. If set to 16 (the
+    default) it will try to use the exact Solarized colors (assuming that
+    you've set these colors to the correct Solarized values either manually or
+    by importing one of the many colorscheme available for popular
+    terminal emulators). If it’s set to 256, then Solarized will use a
+    degraded version of the Solarized palette by displaying the closest colors
+    in the terminal's default 256 colors as shown in [Xterm's color
+    chart](http://en.wikipedia.org/wiki/File:Xterm_color_chart.png).
 
+*   solarized-degrade
+
+    For test purposes only; in GUI mode, this forces Solarized to use the 256
+    degraded color mode to test the approximate color values for accuracy.
+
+*   solarized-bold | solarized-underline | solarized-italic
+
+    If you wish to stop Solarized from displaying bold, underlined or
+    italicized typefaces, simply set the appropriate variable to `nil`.
+
+*   solarized-contrast
+
+    Stick with normal! It's been carefully tested. Setting this option to high
+    or low does use the same Solarized palette but simply shifts some values
+    up or down in order to expand or compress the tonal range displayed.
+
+*   solarized-visibility
+
+    Special characters such as trailing whitespace, tabs, newlines, when
+    displayed using `:set list` can be set to one of three levels depending on
+    your needs. Default value is `normal` with `high` and `low` options.
+
+*   solarized-broken-srgb
+
+    Emacs [bug #8402](http://debbugs.gnu.org/cgi/bugreport.cgi?bug=8402)
+    results in incorrect color handling on Macs. If you are using Emacs on a
+    Mac, we try to determine this value automatically. If this is `t` (the
+    default on Macs), Solarized works around it with alternative colors.
+    However, these colors are not totally portable, so you may be able to edit
+    the "Gen RGB" column in `solarized-definitions.el` to improve them further.
+
+Code Notes
+----------
+
+I have attempted to modularize the creation of Emacs colorschemes in this script and, while it could be refactored further, it should be a good foundation for the creation of any color scheme. By simply changing the values in the `solarized-colors` table in `solarized-definitions.el` and testing in a GUI Emacs, you can rapidly prototype new colorschemes without diving into the weeds of line-item editing each syntax highlight declaration.
 
 The Values
 ----------
 
-L\*a\*b values are canonical (White D65, Reference D50), other values are 
+L\*a\*b values are canonical (White D65, Reference D50), other values are
 matched in sRGB space.
 
     SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
@@ -274,4 +166,16 @@ matched in sRGB space.
     blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
     cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
     green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
-    
+
+### Bug Reporting
+
+Here are some things to keep in mind when submitting a bug report:
+
+*   include the output of `M-x version` in your report,
+*   include the names of Emacs faces that you have a problem with (`M-: (face-at-point)` and `M-x describe-face` will tell you the name of the face at point),
+*   include the output of `M-: (display-color-cells)` (that lets us know which set of colors your Emacs is using),
+*   screenshots are very helpful (before and after if you made a change),
+*   if you’re using a terminal, the name of the terminal and (if you can find out) the number of colors the terminal app is using,
+*   also if you’re using a terminal, try running Emacs in GUI mode, and see if the problem exists there (if it does, report the bug that way, if not, just mention that it’s a terminal-only bug),
+*   it’s very helpful (but not expected) if you can compare it to a similar situation in VIM (especially if you know the VIM highlight name or have a screenshot), and
+*  `M-x customize-apropos-faces` can help you find all the relevant faces if you are submitting faces for a mode.

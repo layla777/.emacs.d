@@ -198,6 +198,15 @@
 ;; Enable debug on error to trace detailed error messages
 (setq debug-on-error t)
 
+;; Set the frame's background mode to dark globally
+(setq frame-background-mode 'dark)
+
+;; Add the emacs-color-theme-solarized directory to the custom theme load path
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+
+;; Load Solarized theme
+(load-theme 'solarized t)
+
 ;;; init.el ends here
 
 (custom-set-variables
@@ -205,11 +214,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("833ddce3314a4e28411edf3c6efde468f6f2616fc31e17a62587d6a9255f4633" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" "5dbdb4a71a0e834318ae868143bb4329be492dd04bdf8b398fb103ba1b8c681a" default))
  '(package-selected-packages
-   '(taxy-magit-section org-starter swiper ivy yasnippet which-key visual-regexp solarized-theme smex smartparens quelpa-use-package projectile multiple-cursors magit julia-mode js2-mode htmlize ggtags flycheck-pos-tip exec-path-from-shell diminish auto-complete auctex async)))
+   '(solarized-theme taxy-magit-section org-starter swiper ivy yasnippet which-key visual-regexp smex smartparens quelpa-use-package projectile multiple-cursors magit julia-mode js2-mode htmlize ggtags flycheck-pos-tip exec-path-from-shell diminish auto-complete auctex async)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, be careful.
+ ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )

@@ -1,6 +1,17 @@
 # Auto-generated files
 *.elc
+*~
+#*
 auto-save-list/
-ac-comphist.dat
 projectile-bookmarks.eld
 transient/
+/elpa/
+/quelpa/build/
+/quelpa/cache
+/quelpa/melpa/
+/recentf
+
+# Emacs-specific backup and auto-save files
+.emacs.desktop
+.emacs.desktop.lock
+.emacs.d/.mc-lists.el

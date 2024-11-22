@@ -1,3 +1,6 @@
 [submodule "quelpa/build/quelpa"]
 	path = quelpa/build/quelpa
 	url = https://github.com/quelpa/quelpa
+[submodule "quelpa/build/quelpa-use-package"]
+	path = quelpa/build/quelpa-use-package
+	url = https://github.com/quelpa/quelpa-use-package
