@@ -1,0 +1,3 @@
+[submodule "quelpa/build/quelpa"]
+	path = quelpa/build/quelpa
+	url = https://github.com/quelpa/quelpa
